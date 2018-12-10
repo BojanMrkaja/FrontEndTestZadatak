@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAC,QAAQ,CAAC;EACZ,KAAK,EAAE,eAAe;EACtB,SAAS,EAAE,MAAM;CACpB",
+    "sources": [
+        "../sccs/headerNavigation.scss"
+    ],
+    "names": [],
+    "file": "headerNavigation.css"
+}

@@ -1,0 +1,20 @@
+$colors:(
+    primary: #2ecc71,
+    secondary:#322f2f,
+    hover-icon:#00bbf5,
+    text-white:#fff,
+    text-gray:#a5a4a4,
+    nav-link-color:#737373,
+    social-icon-color:#dadada,
+    know-us-bg-color:#efefef
+);
+
+$leadBackgroundImg:url('../img/slider-background.jpg');
+
+@function colors($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+@mixin  ease  {
+    transition: all 0.5s ease-in-out;
+}

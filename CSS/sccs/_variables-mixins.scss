@@ -1,9 +1,0 @@
-$colors:(primary: #2ecc71,
-secondary:#322f2f,
-hover-icon:#00bbf5,
-text-white:#fff,
-text-gray:#fefefe);
-
-@function colors($color-name) {
-    @return map-get($colors, $color-name)
-}
