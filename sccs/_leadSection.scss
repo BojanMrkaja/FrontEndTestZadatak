@@ -48,5 +48,16 @@
 @media(min-width:1200px){
     .lead-section{
         height: 550px;
+        margin-bottom: 250px;
+
+        .wrapper{
+            bottom: -175px;
+        
+            p{
+                width: 60%!important;
+            }
+        }
     }
+
+ 
 }

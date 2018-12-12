@@ -1,0 +1,112 @@
+.projects {
+    padding-top: 50px;
+    text-align: center;
+
+    h2 {
+        color: colors(nav-link-color);
+    }
+
+    p {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .projects-slider-wrapper {
+
+        img {
+            height: 250px;
+            opacity: 0.5;
+            margin-bottom: 10px;
+        }
+
+        li{
+            position: relative;
+            @include ease;
+
+            &:hover img{
+                opacity: 1;
+            }
+
+            &:hover .fa{
+                display: inline-block;
+                animation: falling 0.5s linear forwards;
+            }
+
+            &:hover h2{
+                visibility: visible;
+                animation: falling 0.5s linear forwards;
+            }
+
+            a{
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 3rem;
+                color: colors(text-white);
+                padding: 20px;
+                background-color: colors(primary);
+                border-radius: 50%;
+                display: none;
+            }
+            
+            h2{
+                visibility: hidden;
+                @include fast-ease;
+                text-transform: uppercase;
+                color: colors(primary);
+            }
+        }        
+    }
+
+    .ready{
+        padding: 30px 0;
+        background-color: colors(secondary);
+        
+        p{
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+
+        }
+    }
+}
+
+@media(min-width:768px){
+    .projects{
+        .ready{
+
+            p{
+                text-align: left;
+            }
+
+            a.btn{
+                display: inline-block;
+                width: 300px;
+            }
+        }
+    }
+}
+
+@keyframes falling {
+    0% {transform:translateY(-70%); opacity:0}
+    50% {transform:translateY(-70%); opacity:0.5}
+    100% {opacity:1}
+}
+
+.owl-carousel .owl-nav{
+    width: 30%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.owl-carousel .owl-nav button.owl-prev, 
+.owl-carousel .owl-nav button.owl-next{
+    font-size: 2rem;
+    @include ease;
+
+    &:hover{
+        background-color: transparent;
+        color: colors(primary);
+    }
+}

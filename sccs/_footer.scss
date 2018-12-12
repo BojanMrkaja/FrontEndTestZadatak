@@ -1,0 +1,40 @@
+footer {
+    padding: 20px 0;
+    text-align: center;
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        a {
+            display: inline-block;
+            color: colors(text-gray);
+            margin-right: 10px;
+            text-transform: uppercase;
+            @include ease;
+
+            &::after {
+                content: '/';
+                padding-left: 10px;
+            }
+
+            &:hover{
+                color: colors(primary)
+            }
+
+            &:nth-of-type(4)::after{
+                content: '';
+            }
+
+        }
+    }
+}
+
+@media(min-width:768px){
+    footer{
+        p{
+            margin-bottom: 0;
+        }
+    }
+}
